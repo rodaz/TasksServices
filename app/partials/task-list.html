@@ -1,0 +1,16 @@
+<table class="table">
+        <tr>
+          <td>Name</td>
+          <td>Tags</td>
+          <td>Actual effort</td>
+          <td>Estimated effort</td>
+          <td>Due date</td>
+        </tr>
+        <tr ng-repeat="task in tasks|filter:{'obj_status':'active'}">
+          <td ng-class="{highPrior: task.is_high_priority==true}"><a href="#/tasks/{{task.id}}">{{task.name}}</a></td>
+          <td>{{task.tags}}</td>
+          <td>{{task.actual_effort}}</td>
+          <td>{{task.estimated_effort}}</td>
+          <td>{{task.due_date|date:'medium'}}</td>
+        </tr>
+</table>

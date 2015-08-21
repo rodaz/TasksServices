@@ -1,0 +1,5 @@
+<div ng-repeat="task in tasks|filter:{'id':+taskId}:true">
+	<h1>{{task.name}}
+		<br><small>{{task.description}}</small>
+	</h1>
+</div>
